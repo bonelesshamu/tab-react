@@ -1,0 +1,50 @@
+.side-area {
+  flex: 2;
+  background-color: cornsilk;
+  height: 100%;
+  color: #fff;
+  transform: translateX(0%);
+  transition: transform 1s ease;
+  z-index: 5;
+}
+
+.side-area.hidden {
+  transform: translateX(-80%);
+  transition: transform 1s ease;
+}
+
+/* スマホ用：画面幅が600px以下なら */
+@media (max-width: 600px) {
+  .side-area {
+    position: absolute;
+    width: 240px;
+    left: 0;
+    top: 0;
+    transform: translateX(0%);
+    transition: transform 1s ease;
+    background-color: pink;
+    box-shadow: 3px 0 6px rgba(0,0,0,0.2);
+  }
+}
+
+.sidebar-toggle-button {
+  position: flex;
+  background-color: #4fc3f7;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  margin: 10px;
+  margin-right: 5px;
+  margin-left: auto;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 1s;
+}
+
+.sidebar-toggle-button:hover {
+  background-color: #039be5;
+}
+
+
